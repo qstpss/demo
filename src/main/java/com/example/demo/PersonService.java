@@ -32,7 +32,7 @@ public class PersonService {
     public void edit(Long id) {
         Person byId = repository.findById(id).get();
         byId.setFirstName("changed");
-        entityManager.flush();
+        entityManager.flush();//here UPDATE occurs
     }
 
     public Iterable<Person> getAll() {
